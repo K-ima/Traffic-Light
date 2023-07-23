@@ -9,10 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var showButton: UIButton!
+
+    @IBOutlet var redSignal: UIView!
+    
+    @IBOutlet var yellowSiglan: UIView!
+    
+    @IBOutlet var greenSignal: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        showButton.layer.cornerRadius = 10
     }
 
-
+    @IBAction func changeNameButton(_ sender: UIButton) {
+ 
+    }
 }
 

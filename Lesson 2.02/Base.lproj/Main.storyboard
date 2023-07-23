@@ -49,8 +49,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JYi-23-QXJ"/>
-                                    <action selector="changeNameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="riF-38-vba"/>
+                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JMO-BD-5St"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,10 +67,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenSignal" destination="zv6-vE-8uV" id="CjB-a2-2ih"/>
-                        <outlet property="redSignal" destination="q56-dj-0rD" id="Mkk-mu-CFU"/>
-                        <outlet property="showButton" destination="uaW-ah-y6M" id="RO5-Bb-2Ew"/>
-                        <outlet property="yellowSignal" destination="gBY-UC-NcL" id="UuG-ki-UJI"/>
+                        <outlet property="greenSignal" destination="zv6-vE-8uV" id="EId-v6-Y9Q"/>
+                        <outlet property="redSignal" destination="q56-dj-0rD" id="eY7-Kt-nj3"/>
+                        <outlet property="showButton" destination="uaW-ah-y6M" id="e4d-dU-CwT"/>
+                        <outlet property="yellowSignal" destination="gBY-UC-NcL" id="vMP-0B-gcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

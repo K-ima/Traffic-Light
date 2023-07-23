@@ -20,15 +20,15 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="zxO-uy-84R">
                                 <rect key="frame" x="146" y="59" width="101" height="480"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q56-dj-0rD">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q56-dj-0rD">
                                         <rect key="frame" x="0.0" y="0.0" width="101" height="100.66666666666667"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBY-UC-NcL">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBY-UC-NcL">
                                         <rect key="frame" x="0.0" y="189.66666666666666" width="101" height="100.66666666666666"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zv6-vE-8uV">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zv6-vE-8uV">
                                         <rect key="frame" x="0.0" y="379.33333333333331" width="101" height="100.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -49,6 +49,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JYi-23-QXJ"/>
                                     <action selector="changeNameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="riF-38-vba"/>
                                 </connections>
                             </button>
@@ -70,8 +71,7 @@
                         <outlet property="greenSignal" destination="zv6-vE-8uV" id="CjB-a2-2ih"/>
                         <outlet property="redSignal" destination="q56-dj-0rD" id="Mkk-mu-CFU"/>
                         <outlet property="showButton" destination="uaW-ah-y6M" id="RO5-Bb-2Ew"/>
-                        <outlet property="yellowSiglan" destination="gBY-UC-NcL" id="UuG-ki-UJI"/>
-                        <outlet property="yellowSignal" destination="gBY-UC-NcL" id="KP0-l0-yiK"/>
+                        <outlet property="yellowSignal" destination="gBY-UC-NcL" id="UuG-ki-UJI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,35 +9,50 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    @IBOutlet var showButton: UIButton!
+    @IBOutlet var startButton: UIButton!
+    
     @IBOutlet var redSignal: UIView!
     @IBOutlet var yellowSignal: UIView!
     @IBOutlet var greenSignal: UIView!
     
+    private let lightOn: CGFloat = 1
+    private let lightOut: CGFloat = 0.3
+    private var currentLight = CurrentLight.red
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showButton.layer.cornerRadius = 10
-        redSignal.layer.cornerRadius = redSignal.frame.width / 2
-        yellowSignal.layer.cornerRadius = yellowSignal.frame.width / 2
-        greenSignal.layer.cornerRadius = greenSignal.frame.width / 2
+        
+        startButton.layer.cornerRadius = 10
+        
+        redSignal.alpha = lightOut
+        yellowSignal.alpha = lightOut
+        greenSignal.alpha = lightOut
     }
     
-    @IBAction func actionButton(_ sender: UIButton) {
-        sender.setTitle("NEXT", for: .normal)
+    @IBAction func actionButton() {
+        if startButton.currentTitle == "START" {
+            startButton.setTitle("NEXT", for: .normal)
+        }
         
-        if redSignal.alpha != 1 && yellowSignal.alpha != 1 && greenSignal.alpha != 1{
-            redSignal.alpha = 1
-        } else if redSignal.alpha == 1 {
-            redSignal.alpha = 0.3
-            yellowSignal.alpha = 1
-        } else if yellowSignal.alpha == 1 {
-            yellowSignal.alpha = 0.3
-            greenSignal.alpha = 1
-        } else if greenSignal.alpha == 1 {
-            greenSignal.alpha = 0.3
-            redSignal.alpha = 1
+        switch currentLight {
+        case .red:
+            greenSignal.alpha = lightOut
+            redSignal.alpha = lightOn
+            currentLight = .yellow
+        case .yellow:
+            redSignal.alpha = lightOut
+            yellowSignal.alpha = lightOn
+            currentLight = .green
+        case .green:
+            yellowSignal.alpha = lightOut
+            greenSignal.alpha = lightOn
+            currentLight = .red
         }
     }
 }
 
+extension ViewController {
+    enum CurrentLight {
+        case red, yellow, green
+    }
+}
